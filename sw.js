@@ -100,7 +100,7 @@ self.addEventListener('fetch', (event) => {
                     caches.open(CACHE_DYNAMIC_NAME)
                         .then(cache => {
                             cache.put(event.request, respNet)
-                                .then(cleanCache(CACHE_DYNAMIC_NAME, ));
+                                .then(cleanCache(CACHE_DYNAMIC_NAME,4 ));
                         });
                     return respNet.clone();
                 })
